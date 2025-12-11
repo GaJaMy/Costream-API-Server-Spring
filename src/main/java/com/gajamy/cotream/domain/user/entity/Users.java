@@ -27,10 +27,7 @@ public class Users extends BaseEntity {
     @Id
     private String id;
 
-    private String profile;
-
-    @Column(nullable = false)
-    private int followers;
+    private String password;
 
     @OneToMany(mappedBy = "toId", cascade = CascadeType.ALL)
     private List<FriendRequest> friendRequests;

@@ -5,9 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class CreateUserRequest {
+public class RegisterUserRequest {
     private String id;
-    private String profile;
-    private int followers;
-
+    private String password;
 }
