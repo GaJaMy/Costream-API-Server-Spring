@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.gajamy'
 version = '0.0.1-SNAPSHOT'
-description = 'ChzzekHub Spring API Server'
+description = 'Cotream - Co-Streaming Platform API Server'
 
 java {
 	toolchain {

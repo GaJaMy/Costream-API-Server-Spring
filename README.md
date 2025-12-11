@@ -1,6 +1,6 @@
-# ChzzkHub-API-Server-Spring
+# Cotream-API-Server-Spring
 
-치지직(Chzzk) 방송 합방 멤버 구하기 플랫폼의 Spring 기반 API 서버 프로젝트입니다.  
+스트리밍 합방 플랫폼 플랫폼의 Spring 기반 API 서버 프로젝트입니다.  
 스트리머들이 보다 쉽게 합방 멤버를 모집하고, 크루/친구 관리 및 메시지 전송을 지원합니다.
 
 ---
@@ -19,7 +19,7 @@
 ## 📌 주요 기능
 
 ### 1. 사용자(User)
-- 치지직 스트리머 인증
+- 스트리머 인증
 - 로그인
 - 로그아웃
 
@@ -40,7 +40,7 @@
     - **번개 합방**: 즉석 합방(친구들만 초대 가능능) 생성
     - **공개 합방**: 전체 공개 합방 모집
 - 초대 메시지 전송
-    - **치즈허브(내부 플랫폼)**
+    - **Cotream(내부 플랫폼)**
     - **디스코드 Webhook 연동**
 - 합방 정보 관리
     - 카테고리, 인원 수, 일정, 공지, 상세 내용 등록
@@ -53,7 +53,7 @@
 
 ### 웹 페이지 구성
 - **메인 페이지** (`/`): 플랫폼 소개 및 주요 기능 안내
-- **로그인 페이지** (`/login`): 치지직 스트리머 인증 및 로그인
+- **로그인 페이지** (`/login`): 스트리머 인증 및 로그인
 - **크루 관리** (`/crew`): 크루 생성, 관리, 멤버 초대/삭제
 - **친구 관리** (`/friend`): 친구 추가, 메시지 전송, 상태 관리
 - **합방 관리** (`/collaboration`): 합방 생성, 초대, 상태 관리
@@ -77,14 +77,14 @@
 ## DB 설계
 
 ### 📊 Entity Relationship Diagram
-**ERDCloud에서 직접 보기**: [ChzzkHub Database Schema](https://www.erdcloud.com/p/xgAq475HHrSBvQLC9)
+**ERDCloud에서 직접 보기**: [Cotream Database Schema](https://www.erdcloud.com/p/xgAq475HHrSBvQLC9)
 - 업데이트
   - 2025-09-21 특정 테이블에 생성시간, 업데이트 시간 업데이트
 
 
 ### 📊 주요 테이블 구성
 
-- **USERS**: 사용자 정보 (치지직 스트리머)
+- **USERS**: 사용자 정보 (스트리머)
 - **CREW**: 크루 정보 및 관리
 - **CREW_REQUEST**: 크루 가입 요청
 - **CREW_MEMBER**: 크루 멤버십
@@ -100,7 +100,7 @@
 ### 1. 프로젝트 클론 및 빌드
 ```bash
 git clone [repository-url]
-cd ChzzkHub-API-Server-Spring
+cd Cotream-API-Server-Spring
 ./gradlew build
 ```
 
@@ -197,7 +197,7 @@ Adapter (외부) → Application (Port) → Domain (핵심)
 ### 📂 디렉토리 구조
 
 ```
-src/main/java/com/gajamy/ChzzkHub/
+src/main/java/com/gajamy/cotream/
 │
 ├── 📁 domain/                              # 도메인 계층 (핵심 비즈니스 엔티티)
 │   ├── BaseEntity.java                    # 공통 엔티티 (생성/수정 시간)
@@ -266,7 +266,7 @@ src/main/java/com/gajamy/ChzzkHub/
 ├── 📁 interfaces/controller/               # 기존 웹 페이지 컨트롤러
 │   └── WebController.java                 # Thymeleaf 페이지 렌더링
 │
-└── ChzzkHubApplication.java               # Spring Boot 메인 클래스
+└── CotreamApplication.java               # Spring Boot 메인 클래스
 
 resources/
 ├── application.properties                 # 애플리케이션 설정
