@@ -1,7 +1,7 @@
 package com.gajamy.cotream.application.port.in.user;
 
-import com.gajamy.cotream.application.dto.user.request.SignInRequest;
+import com.gajamy.cotream.application.dto.user.request.SignUpRequest;
 
 public interface RegisterUserUseCase {
-    void registerUser();
+    void registerUser(SignUpRequest request);
 }
